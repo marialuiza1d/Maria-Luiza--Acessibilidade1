@@ -2,233 +2,393 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <title>Luzy Moda</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Luzy Moda</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --marrom-claro: #C29D6B;
+      --bege: #F2E9D6;
+      --marrom-escuro: #4A3C31;
+      --preto: #2D2D2D;
+      --branco: #FFFFFF;
+    }
 
-        h1, h2, h3 {
-            font-family: 'Merriweather', serif;
-            color: #2e2a47;
-        }
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: var(--bege);
+      color: var(--marrom-escuro);
+      font-size: 1rem;
+    }
 
-        .nav-link {
-            font-family: 'Roboto', sans-serif;
-            color: #2e2a47;
-            text-transform: uppercase;
-            font-weight: 500;
-            letter-spacing: 1px;
-        }
+    header {
+      background-color: var(--branco);
+      padding: 20px 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
 
-        .nav-link:hover {
-            color: #c4a59f;
-        }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-        .btn-primary {
-            background-color: #d9bdb3;
-            border-color: #d9bdb3;
-            font-weight: 600;
-        }
+    .nav-link {
+      color: var(--marrom-escuro);
+      font-weight: 600;
+      margin: 0 15px;
+      text-transform: uppercase;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
 
-        .btn-primary:hover {
-            background-color: #bfa69e;
-            border-color: #bfa69e;
-        }
+    .nav-link:hover {
+      color: var(--marrom-claro);
+    }
 
-        .inicio-fundo {
-            background: #d9bdb3;
-            padding: 50px 0;
-            border-radius: 8px;
-        }
+    .logo img {
+      height: 50px;
+      width: auto;
+    }
 
-        .esquerda-conteudo h1 {
-            font-size: 3rem;
-            line-height: 1.3;
-        }
+    /* Faixa Bege Inicial */
+    .faixa-bege {
+      background-color: var(--bege);
+      padding: 60px 0;
+      text-align: center;
+    }
 
-        .img-inicio {
-            border-radius: 8px;
-        }
+    .faixa-bege h1 {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--marrom-escuro);
+      font-size: 2.5rem;
+      margin: 0;
+    }
 
-        .fundo-galeria {
-            background-color: #fff;
-            border-radius: 8px;
-            padding: 30px;
-        }
+    /* Seção de Início */
+    .inicio-fundo {
+      background-image: url('img/4965007.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 450px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
 
-        .img-fluid {
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
+    .inicio-fundo h2 {
+      color: var(--branco);
+      font-size: 2rem;
+      font-weight: 600;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
 
-        footer {
-            background-color: #f1f1f1;
-            padding: 30px 0;
-            font-family: 'Roboto', sans-serif;
-            color: #777;
-        }
+    .botao-inicio {
+      background-color: var(--marrom-claro);
+      color: var(--branco);
+      padding: 12px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
 
-        .footer-social-icons i {
-            color: #2e2a47;
-            margin: 0 10px;
-            font-size: 1.5rem;
-        }
+    .botao-inicio:hover {
+      background-color: var(--marrom-escuro);
+    }
 
-        .footer-social-icons i:hover {
-            color: #c4a59f;
-        }
+    /* Seção Tropicalia */
+    #tropicalia {
+      padding: 60px 20px;
+      background-color: var(--branco);
+      text-align: center;
+    }
 
-        #acessibilidade {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-        }
+    #tropicalia h2 {
+      color: var(--marrom-escuro);
+      font-size: 2rem;
+      font-weight: 600;
+    }
 
-        .opcoes-acessibilidade {
-            display: none;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            padding: 10px;
-            position: absolute;
-            top: 40px;
-            right: 0;
-        }
+    #tropicalia p {
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--marrom-escuro);
+      line-height: 1.6;
+    }
 
-        .opcoes-acessibilidade button {
-            background-color: #d9bdb3;
-            border-color: #d9bdb3;
-            margin: 5px 0;
-        }
+    /* Galeria */
+    #galeria {
+      padding: 60px 20px;
+      background-color: var(--bege);
+      text-align: center;
+    }
 
-        .opcoes-acessibilidade button:hover {
-            background-color: #bfa69e;
-            border-color: #bfa69e;
-        }
+    #galeria h2 {
+      color: var(--marrom-escuro);
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 40px;
+    }
 
-        .menu-acessibilidade:hover .opcoes-acessibilidade {
-            display: block;
-        }
-    </style>
+    .galeria-imagem {
+      display: inline-block;
+      margin: 10px;
+      width: 280px;
+      height: 350px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .galeria-imagem:hover {
+      transform: scale(1.05);
+    }
+
+    /* Rodapé */
+    footer {
+      background-color: var(--marrom-escuro);
+      color: var(--branco);
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    .footer-social-icons a {
+      color: var(--branco);
+      margin: 0 15px;
+      font-size: 1.5rem;
+      transition: color 0.3s;
+    }
+
+    .footer-social-icons a:hover {
+      color: var(--marrom-claro);
+    }
+
+    /* -------------------------------
+       Acessibilidade (vertical, minimalista)
+       ------------------------------- */
+    #acessibilidade {
+      position: fixed;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      z-index: 1300; /* passa por cima de outros botões */
+    }
+
+    #botao-acessibilidade {
+      background: var(--branco);
+      border: 1px solid rgba(74, 60, 49, 0.25);
+      color: var(--marrom-escuro);
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      transform: rotate(180deg); /* deixa leitura de cima para baixo */
+      font-size: 0.9rem;
+      letter-spacing: 0.15rem;
+      cursor: pointer;
+      padding: 12px 8px;
+      border-radius: 12px 0 0 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      transition: background-color 0.2s, color 0.2s, transform 0.2s;
+    }
+
+    #botao-acessibilidade:hover,
+    #botao-acessibilidade:focus-visible {
+      background: var(--marrom-claro);
+      color: var(--branco);
+      outline: none;
+    }
+
+    .opcoes-acessibilidade {
+      display: none;
+      position: absolute;
+      right: 50px; /* aparece à esquerda do botão vertical */
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--branco);
+      border: 1px solid rgba(74, 60, 49, 0.15);
+      border-radius: 12px;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+      padding: 10px;
+      white-space: nowrap;
+    }
+
+    .opcoes-acessibilidade button {
+      background: transparent;
+      border: 1px solid var(--marrom-escuro);
+      color: var(--marrom-escuro);
+      margin: 4px 3px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .opcoes-acessibilidade button:hover,
+    .opcoes-acessibilidade button:focus-visible {
+      background-color: var(--marrom-escuro);
+      color: var(--branco);
+      outline: none;
+    }
+
+    .mostrar {
+      display: block !important;
+    }
+
+    /* Alto contraste opcional, mantendo estética */
+    body.alto-contraste {
+      background: #1f1a17;
+      color: #ffffff;
+    }
+    body.alto-contraste header { background: #2a231d; }
+    body.alto-contraste .nav-link { color: #ffffff; }
+    body.alto-contraste .faixa-bege { background: #2a231d; }
+    body.alto-contraste #galeria { background: #2a231d; }
+    body.alto-contraste footer { background: #000000; }
+    body.alto-contraste .botao-inicio { background: #6b594b; }
+
+    /* Preferência de movimento reduzido */
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+
+    /* Mobile: aproxima o menu do botão */
+    @media (max-width: 576px) {
+      .opcoes-acessibilidade {
+        right: 44px;
+      }
+      #botao-acessibilidade {
+        font-size: 0.85rem;
+        letter-spacing: 0.12rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <header class="p-5">
-        <nav class="container d-flex justify-content-between align-items-center">
-            <img src="img/logo.png" class="nav-img" loading="lazy" alt="Logo da Luzy Moda">
-            <ul class="nav mt-5">
-                <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
-                <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-            </ul>
-            <div id="acessibilidade" class="menu-acessibilidade">
-                <button id="botao-acessibilidade" class="btn btn-primary fw-bold rotacao-botao" aria-expanded="false">Acessibilidade</button>
-                <div id="opcoes-acessibilidade" class="opcoes-acessibilidade">
-                    <button id="aumentar-fonte" class="btn btn-primary fw-bold" aria-label="Aumentar o tamanho da fonte">A+</button>
-                    <button id="diminuir-fonte" class="btn btn-primary fw-bold" aria-label="Diminuir o tamanho da fonte">A-</button>
-                    <button id="alterna-contraste" class="btn btn-primary fw-bold" aria-label="Alterna o contraste de cores">
-                        <i class="bi bi-shadows"></i>
-                    </button>
-                </div>
-            </div>
-        </nav>
-    </header>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="img/logo.png" alt="Logo da Luzy Moda">
+      </div>
+      <ul class="nav">
+        <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tropicalia">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main class="container my-5">
-        <section id="inicio" class="my-5">
-            <div class="inicio-fundo d-flex justify-content-between align-items-center">
-                <div class="esquerda-conteudo">
-                    <h1 class="display-4 text-white fst-italic fw-bold">Moda é uma forma de expressão, a roupa é a sua tela.</h1>
-                    <img src="img/logo-2.png" class="mb-3" width="563" height="278" loading="lazy" alt="Logo Luzy Moda">
-                    <a href="#tropicalia" class="btn btn-primary btn-lg botao-inicio fw-semibold">Quero conhecer!</a>
-                </div>
-                <img src="img/lossy-page1-640px-Os_Mutantes.tif (1).png" alt="Imagem de moda feminina" class="img-fluid img-inicio">
-            </div>
-        </section>
+  <!-- Faixa Bege -->
+  <div class="faixa-bege">
+    <h1>Moda é uma forma de expressão, a roupa é a sua tela.</h1>
+  </div>
 
-        <section id="tropicalia" class="my-5 pt-6 secao-tropicalia" tabindex="0" aria-label="Seção explicativa sobre o conceito de moda e estilo">
-            <div class="container d-flex align-items-center">
-                <div class="col-4 d-flex justify-content-center">
-                    <img src="img/image (1).png" class="rounded-pill" width="273" height="331" loading="lazy" alt="Imagem de estilista feminina">
-                </div>
-                <div class="col-5">
-                    <h2>O que é a Moda Luzy?</h2>
-                    <p class="p-2">Na Luzy Moda, acreditamos que cada mulher tem seu estilo único, e nossa missão é proporcionar roupas que expressem sua personalidade e sua autenticidade. Estamos sempre antenadas às últimas tendências, trazendo o melhor da moda para o seu guarda-roupa.</p>
-                </div>
-            </div>
-        </section>
+  <!-- Seção de Início -->
+  <section id="inicio" class="inicio-fundo">
+    <h2>Transforme seu estilo com a Luzy Moda!</h2>
+    <a href="#galeria" class="botao-inicio">Conheça a Galeria</a>
+  </section>
 
-        <section id="galeria" tabindex="0" aria-label="Seção de galeria de imagens">
-            <h2 class="text-center pt-5">Galeria de Looks</h2>
-            <div class="container p-3 mt-3 fundo-galeria">
-                <div class="row justify-content-md-center">
-                    <div class="col-md-4">
-                        <img src="img/roupa1.jpg" class="img-fluid rounded-5" loading="lazy" alt="Look 1">
-                    </div>
-                    <div class="col-md-4">
-                        <img src="img/roupa2.jpg" class="img-fluid rounded-5" loading="lazy" alt="Look 2">
-                    </div>
-                </div>
-                <div class="row mt-4 justify-content-md-center">
-                    <div class="col-md-4">
-                        <img src="img/roupa3.jpg" class="img-fluid rounded-5" loading="lazy" alt="Look 3">
-                    </div>
-                    <div class="col-md-4">
-                        <img src="img/roupa4.jpg" class="img-fluid rounded-5" loading="lazy" alt="Look 4">
-                    </div>
-                </div>
-            </div>
-        </section>
+  <!-- Seção Tropicalia -->
+  <section id="tropicalia">
+    <h2>O que é a Moda Luzy?</h2>
+    <p>Na Luzy Moda, acreditamos que cada mulher tem seu estilo único, e nossa missão é proporcionar roupas que expressem sua personalidade e autenticidade. Estamos sempre antenadas às últimas tendências, trazendo o melhor da moda para o seu guarda-roupa.</p>
+  </section>
 
-        <section id="contato">
-            <div class="container p-5 d-flex justify-content-center">
-                <div class="col-md-8 col-lg-10 rounded-5 formulario">
-                    <h2 class="mb-3">Entre em contato</h2>
-                    <form>
-                        <div class="form-group mb-3">
-                            <label for="nome">Nome</label>
-                            <input type="text" id="nome" name="nome" class="form-control rounded-3 mt-1" placeholder="Digite seu nome completo">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" class="form-control rounded-3 mt-1" placeholder="Digite seu email">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="mensagem">Mensagem</label>
-                            <textarea id="mensagem" name="mensagem" class="form-control rounded-4 mt-2" rows="4" placeholder="Escreva sua mensagem"></textarea>
-                        </div>
-                        <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-primary btn-lg rounded-pill">Enviar mensagem</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
+  <!-- Galeria -->
+  <section id="galeria">
+    <h2>Galeria de Looks</h2>
+    <div class="container">
+      <div class="galeria-imagem" style="background-image: url('img/look1.jpg');"></div>
+      <div class="galeria-imagem" style="background-image: url('img/look2.jpg');"></div>
+      <div class="galeria-imagem" style="background-image: url('img/look3.jpg');"></div>
+      <div class="galeria-imagem" style="background-image: url('img/look4.jpg');"></div>
+    </div>
+  </section>
 
-    <footer class="text-center p-3 fst-italic">
-        <p>Acesse nossas redes:</p>
-        <div class="footer-social-icons">
-            <i class="bi bi-whatsapp"></i>
-            <i class="bi bi-instagram"></i>
-            <i class="bi bi-tiktok"></i>
-        </div>
-        <p class="mt-3">Desenvolvido por Start by Alura. Projeto fictício sem fins comerciais.</p>
-    </footer>
+  <!-- Rodapé -->
+  <footer>
+    <p>© 2025 Luzy Moda. Todos os direitos reservados.</p>
+    <div class="footer-social-icons">
+      <a href="https://facebook.com"><i class="bi bi-facebook"></i></a>
+      <a href="https://instagram.com"><i class="bi bi-instagram"></i></a>
+      <a href="https://twitter.com"><i class="bi bi-twitter"></i></a>
+    </div>
+  </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.js"></script>
-    <script src="script.js"></script>
+  <!-- Botão de Acessibilidade (ADICIONADO, sem remover nada) -->
+  <div id="acessibilidade" class="menu-acessibilidade" aria-live="polite">
+    <button id="botao-acessibilidade"
+            aria-controls="opcoes-acessibilidade"
+            aria-expanded="false"
+            aria-label="Abrir opções de acessibilidade"
+            title="Acessibilidade">
+      Acessibilidade
+    </button>
+
+    <div id="opcoes-acessibilidade" class="opcoes-acessibilidade" role="menu" aria-label="Opções de acessibilidade">
+      <button id="aumentar-fonte" role="menuitem" aria-label="Aumentar fonte">A+</button>
+      <button id="diminuir-fonte" role="menuitem" aria-label="Diminuir fonte">A-</button>
+      <button id="alterna-contraste" role="menuitem" aria-label="Alternar alto contraste">
+        <i class="bi bi-shadows"></i> Contraste
+      </button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    const btnA11y = document.getElementById("botao-acessibilidade");
+    const menuA11y = document.getElementById("opcoes-acessibilidade");
+
+    btnA11y.addEventListener("click", function () {
+      const open = menuA11y.classList.toggle("mostrar");
+      btnA11y.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+
+    // Aumentar/DIMINUIR fonte de forma incremental (mantém estética)
+    function adjustRootFont(delta) {
+      const html = document.documentElement;
+      const style = window.getComputedStyle(html).fontSize;
+      const current = parseFloat(style); // px
+      const target = Math.max(14, Math.min(21, current + delta)); // clamp ~0.875rem a ~1.3125rem
+      html.style.fontSize = target + "px";
+    }
+
+    document.getElementById("aumentar-fonte").addEventListener("click", function () {
+      adjustRootFont(2);
+    });
+
+    document.getElementById("diminuir-fonte").addEventListener("click", function () {
+      adjustRootFont(-2);
+    });
+
+    document.getElementById("alterna-contraste").addEventListener("click", function () {
+      document.body.classList.toggle("alto-contraste");
+    });
+
+    // Fecha o menu ao clicar fora
+    document.addEventListener("click", (e) => {
+      if (!document.getElementById("acessibilidade").contains(e.target) && menuA11y.classList.contains("mostrar")) {
+        menuA11y.classList.remove("mostrar");
+        btnA11y.setAttribute("aria-expanded", "false");
+      }
+    });
+  </script>
 </body>
 
 </html>
